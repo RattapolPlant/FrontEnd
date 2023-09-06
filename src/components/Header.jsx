@@ -1,4 +1,5 @@
 import { UserCircle2 } from "lucide-react"
+import logo from "/rp.png"
 
 const Header = () => {
     return(
@@ -16,7 +17,7 @@ const Header = () => {
             </div>
         </div>
         <div className="navbar-center">
-            <a className="btn btn-ghost normal-case text-xl">Ratthapol Plant</a>
+            <a className="btn btn-ghost normal-case text-xl"><img src={logo} className="h-full" alt="RatthapolPlant Logo" /></a>
         </div>
         <div className="navbar-end">
             <button className="btn btn-ghost btn-circle">

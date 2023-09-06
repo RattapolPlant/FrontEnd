@@ -17,7 +17,7 @@ const router = createBrowserRouter(
 )
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <div data-theme="forest" className='h-screen bg-base-100 font-kanit'>
+  <div data-theme="forest" className='min-h-screen bg-base-100 font-kanit'>
     <Header />
     <React.StrictMode>
       <RouterProvider router={router} />
