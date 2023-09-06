@@ -7,6 +7,8 @@ import Header from './components/Header.jsx'
 
 import HomePage from './pages/HomePage.jsx'
 import SinglePage from './pages/SinglePage'
+import Register from './pages/Register'
+import Login from './pages/Login'
 
 
 // const router = createBrowserRouter(
@@ -30,6 +32,8 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       <Routes >
         <Route path='/' element={<HomePage />} ></Route>
         <Route path='/:slug' element={<SinglePage />} ></Route>
+        <Route path='/register' element={<Register />} ></Route>
+        <Route path='/login' element={<Login />} ></Route>
       </Routes>      
       </BrowserRouter>
     </React.StrictMode>
