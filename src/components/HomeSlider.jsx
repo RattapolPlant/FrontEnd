@@ -1,9 +1,11 @@
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
+import { Link } from "react-router-dom"
 
+const HomeSlider = (props) => {
 
-const HomeSlider = () => {
+    const { posts } = props
 
     const settings = {
         dots: true,
@@ -15,8 +17,13 @@ const HomeSlider = () => {
 
     return(
         <Slider {...settings} className="max-w-4xl mx-auto">
-          <div className="min-h-[250px] bg-base-200 rounded-xl">
-          </div>
+            {posts.map(post => (
+                <Link to={"/"+post.slug}>
+                <img src={post.featuredImage.node.sourceUrl} className={`h-[250px] bg-base-200 rounded-xl w-full object-cover`}>
+    
+                </img>
+                </Link>
+            ) )}
         </Slider>
     )
 }
