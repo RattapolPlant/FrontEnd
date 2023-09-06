@@ -6,12 +6,18 @@ import { createBrowserRouter , RouterProvider } from 'react-router-dom'
 import Header from './components/Header.jsx'
 
 import HomePage from './pages/HomePage.jsx'
+import SinglePage from './pages/SinglePage'
+
 
 const router = createBrowserRouter(
   [
     {
       path :"/",
       element : <HomePage />
+    },
+    {
+      path :"/:slug",
+      element : <SinglePage />
     }
   ]
 )
