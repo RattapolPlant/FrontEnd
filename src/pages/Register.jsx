@@ -1,5 +1,6 @@
 import { useForm } from "react-hook-form";
 import axios from "axios"
+import { Link } from "react-router-dom"
 
 const Register = () => {
 
@@ -7,6 +8,9 @@ const Register = () => {
 
     const onSubmit = (data) => {
         console.log(data);
+        axios.post("https://script.google.com/macros/s/AKfycby5EfeAQsqG2nVrgSMRdEHNi1K-37m2u1E8H78Qz8xzGsc7Uy7V_ylAntaJUIjTqCRhyQ/exec",JSON.stringify(data))
+        .then(alert("สมัครเรียบร้อย"))
+        .catch(err => alert("เกิดข้อผิดพลาด"))
     }
 
     return(
@@ -39,6 +43,7 @@ const Register = () => {
                 <input type="password" placeholder="Type here" className="input input-bordered w-full" {...register("password", { required: true})} />
             </div>
             <button type="submit" className="btn btn-primary btn-block my-2">สมัครสมาชิก</button>
+            <Link to={`/login`} type="submit" className="btn btn-secondary btn-block my-2">มีบัญชีแล้ว</Link>
             </form>
         </div>
         </>

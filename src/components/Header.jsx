@@ -21,9 +21,9 @@ const Header = () => {
             <Link to="/" className="btn btn-ghost normal-case text-xl"><img src={logo} className="h-full" alt="RatthapolPlant Logo" /></Link>
         </div>
         <div className="navbar-end">
-            <button className="btn btn-ghost btn-circle">
+            <Link to="/" className="btn btn-ghost btn-circle">
                 <UserCircle2 />
-            </button>
+            </Link>
         </div>
         </div>
         </>
